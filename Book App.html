@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Book Appointment</title>
+<Style>
+h1{
+text-align:center;
+font-family:broadway;
+font-size:72px;
+color:black;
+margin-top:2px;
+}
+button{
+text-align:center;
+margin-left:50px;
+margin-right:50px;
+background-color:white;
+cursor:pointer;
+font-size:15px;
+}
+body{
+background-image:url("https://media-exp1.licdn.com/dms/image/C510BAQHQFznPU5o67A/company-logo_200_200/0?e=2159024400&v=beta&t=JINWefFG4j1KsxG4uIrvi9D-CL6PfsagXGuDJ7Lod5U");
+background-size:640px 620px;
+}
+
+form{
+font-size:18px;
+border:solid;
+border-color:black;
+border-width:2px;
+margin-right:435px;
+margin-left:435px;
+padding:50px;
+background-color:#F0F0F0;
+}
+.star{
+color:red;
+}
+.file{
+background-color:white;
+cursor:pointer;
+}
+#info{
+font-size:14px;
+}
+</Style>
+
+</head>
+<body>
+<h1>HEALTHY INDIA INITIATIVE</h1>
+
+<form action="book.jsp" method="post">
+<span id="info">(Fill this form to book an appointment with the doctor. Fields indicated in <span class="star">*</span> are mandatory)</span><br>
+<label for="name">Name<span class="star">*</span>: </label> <br>
+<input type="text" size="40" name="name"/> <br>
+<label for="Cont">Contact Number<span class="star">*</span>: </label> <br>
+<input type="number" size="40" name="Cont"/> <br>
+<label for="Desc">Reason for meeting: </label> <br>
+<textarea rows="6" cols="30" name="Desc"></textarea> <br><br>
+<label for="doct_id">Doctors' ID (from the table)<span class="star">*</span></label>
+<input type="text" size="40" name="doct_id"/><br>
+<label for="id">Identification<span class="star">*</span>: </label>
+<select name="id">
+<option selected="" value="Default">(Select an ID)</option>
+<option value="Adc">ADHAAR Card</option>
+<option value="Pan">PAN Card</option>
+<option value="Vote">VOTER ID</option>
+<option value="Pass">PASSPORT</option>
+</select>
+<label for="file">Select a file<span class="star">*</span>:</label>
+<input type="file" name="file" class="file">
+<br><br>
+<button>BOOK APPOINTMENT</button>
+
+</form>
+</body>
+</html> 

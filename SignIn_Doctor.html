@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Sign In</title>
+<style>
+h1{
+text-align:center;
+font-family:broadway;
+font-size:72px;
+color:white;
+}
+body{
+background-image:url("https://blog.ipleaders.in/wp-content/uploads/2018/02/BV-Acharya-3.jpg");
+background-color:black;
+background-repeat:no-repeat;
+border:solid;
+border-color:red;
+border-width:5px;
+border-radius:20px;
+
+
+text-align:center;
+}
+.xyz{
+text-align:center;
+margin-top:10px;
+border:solid;
+border-color:white;
+border-width:5px;
+border-radius:10px;
+
+}
+.abc{
+color:white;
+font-size:24px;
+
+}
+.form{
+border:solid;
+border-width:3px;
+border-color:white;
+border-radius:25px;
+margin-left:1000px;
+margin-right:30px;
+text-align:center;
+
+padding:25px;
+
+
+}
+
+#agree{
+font-size:14px;
+color:white;
+}
+#button{
+border:solid;
+border-color:white;
+border-width:2px;
+font-size:16px;
+color:red;
+cursor:pointer
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>HEALTHY INDIA INITIATIVE</h1>
+
+<form class="form" action="retrieve_doctor.jsp" method="get">
+<label for="uname" class="abc">User Name</label><br>
+<input type="text" name="uname" class="xyz" id="username"><br>
+<p id="agree">OR</P>
+<label for="email" class="abc" >E-Mail ID</label><br>
+<input type="mail" name="email" class="xyz"><br><br>
+<label for="pass" class="abc">Password</label><br>
+<input type="password" name="pass" class="xyz" id="password"><br><br>
+<input type="checkbox"><label id="agree">I agree to the terms and conditions</label><br><br>
+
+<button id="button"  onclick="validate()" />LOGIN</button></a>
+</form>
+</body>
+
+</html>

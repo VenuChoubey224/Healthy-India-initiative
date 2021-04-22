@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Registration form</title>
+<Style>
+h1{
+text-align:center;
+font-family:broadway;
+font-size:72px;
+color:black;
+margin-top:2px;
+}
+body{
+background-image:url("https://blog.ipleaders.in/wp-content/uploads/2018/02/BV-Acharya-3.jpg");
+background-color:white;
+background-repeat:no-repeat;
+border:solid;
+border-color:red;
+border-width:5px;
+border-radius:20px;
+
+
+text-align:center;
+}
+#button{
+border:solid;
+border-color:black;
+border-width:2px;
+font-size:16px;
+color:red;
+}
+.abc{
+color:black;
+font-size:16px;
+
+}
+.xyz{
+text-align:center;
+margin-top:10px;
+
+border:solid;
+border-color:black;
+border-width:1px;
+
+
+}
+.form{
+
+margin-left:1040px;
+margin-right:10px;
+Margin-top:1px;
+text-align:center;
+background-color:#f2f2f2;
+
+
+
+}
+h3{
+border:solid;
+border-width:3px;
+border-color:white;
+border-radius:25px;
+margin-left:1020px;
+margin-right:30px;
+Margin-top:1px;
+text-align:center;
+}
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+</Style>
+<Script>
+function formValidation()
+{
+var uid = document.registration.userid;
+var passid = document.registration.passid;
+var uname = document.registration.username;
+var uadd = document.registration.address;
+var ucountry = document.registration.country;
+var uzip = document.registration.zip;
+var uemail = document.registration.email;
+var umsex = document.registration.msex;
+var ufsex = document.registration.fsex; if(userid_validation(uid,5,20))
+{
+if(passid_validation(passid,7,12))
+{
+if(allLetter(uname))
+{
+if(alphanumeric(uadd))
+{ 
+if(countryselect(ucountry))
+{
+if(allnumeric(uzip))
+{
+if(ValidateEmail(uemail))
+{
+if(validsex(umsex,ufsex))
+{
+}
+} 
+}
+} 
+}
+}
+}
+}
+return false;
+
+} function userid_validation(uid,mx,my)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len >= my || uid_len < mx)
+{
+alert("User Id should not be empty / length be between "+mx+" to "+my);
+uid.focus();
+return false;
+}
+return true;
+}
+function passid_validation(passid,mx,my)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+{
+alert("Password should not be empty / length be between "+mx+" to "+my);
+passid.focus();
+return false;
+}
+return true;
+}
+function allLetter(uname)
+{ 
+var letters = /^[A-Za-z\s-]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+uname.focus();
+return false;
+}
+}
+function alphanumeric(uadd)
+{ 
+var letters = /^[0-9a-zA-Z\s-,]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+uadd.focus();
+return false;
+}
+}
+function countryselect(ucountry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+function allnumeric(uzip)
+{ 
+var numbers = /^[0-9]+$/;
+if(uzip.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('ZIP code must have numeric characters only');
+uzip.focus();
+return false;
+}
+}
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+alert('Form Succesfully Submitted');
+window.open("SignIn1.html");
+
+
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+} 
+</Script>
+</head>
+<body onload="document.registration.userid.focus();">
+<h1>HEALTHY INDIA INITIATIVE</h1>
+<h3><u>REGISTER HERE</u></H3>
+
+<form action="store.jsp" method="post" name='registration' class="form" onSubmit="return formValidation();">
+
+<ul>
+<li><label for="userid" class="abc">User id:</label></li>
+<li><input type="text" name="userid" class="xyz" /></li>
+<li><label for="passid" class="abc">Password:</label></li>
+<li><input type="password" name="passid" class="xyz" /></li>
+<li><label for="username" class="abc">Name:</label></li>
+<li><input type="text" name="username" class="xyz" /></li>
+<li><label for="address" class="abc">Address:</label></li>
+<li><input type="text" name="address" class="xyz" /></li>
+<li><label for="country" class="abc">Country:</label></li>
+<li><select name="country">
+<option selected="" value="Default">(Select a country)</option>
+<option value="Aus">Australia</option>
+<option value="Can">Canada</option>
+<option value="Ind">India</option>
+<option value="Rus">Russia</option>
+<option value="USA">USA</option>
+</select></li>
+<li><label for="zip" class="abc">ZIP Code:</label></li>
+<li><input type="text" name="zip" class="xyz" /></li>
+<li><label for="email" class="abc">Email:</label></li>
+<li><input type="text" name="email" class="xyz" /></li>
+
+<li><input type="submit" name="submit" value="Submit" id="button" /></li>
+
+</ul>
+</form>
+</body>
+</html>

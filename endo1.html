@@ -1,0 +1,409 @@
+<html>
+<head>
+<title>Endocrinologist</title>
+<style>
+h1{
+text-align:center;
+font-family:broadway;
+font-size:72px;
+color:black;
+margin-top:2px;
+}
+body{
+background-image:url("https://post.healthline.com/wp-content/uploads/2020/08/Doctors_For_Men-732x549-thumbnail-1-732x549.jpg");
+
+background-repeat:no-repeat;
+background-size:1300px 600px;
+
+}
+table,th,td{
+
+color:white;
+background-color:black;
+text-align:center;
+
+}
+.abc{
+color:black;
+font-size:16px;
+text-align:center;
+}
+.dropbtn {
+  
+  color: black;
+  padding: 16px;
+  font-size: 24px;
+  margin-left:525px;
+margin-right:525px;
+  cursor: pointer;
+  background-color:white;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: center;
+  text-align:center;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+margin-left:500px;
+margin-right:500px;
+}
+table{
+margin-top:500px;
+font-size:20px;
+}
+caption{
+color:black;
+font-size:36px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+a{
+color:white;
+font-size:20px;
+}
+</style>
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+function bookApp(){
+window.open("Book App.html");
+}
+</script>
+
+>
+
+</head>
+<body>
+<h1>HEALTHY INDIA INITIATIVE</h1>
+
+
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Select a city</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="#DEL">DELHI</a>
+    <a href="#MUM">MUMBAI</a>
+    <a href="#BAN">BANGLORE</a>
+    <a href="#NOD">NOIDA</a>
+    <a href="#CHEN">CHENNAI</a>
+    <a href="#LUCK">LUCKNOW</a>
+    <a href="#RAN">RANCHI</a>
+  </div>
+</div>
+<div class="table">
+<table style="width:100%" id="DEL">
+<caption>Doctors in DELHI</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+
+<table style="width:100%" id="MUM">
+<caption>Doctors in MUMBAI</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+
+<table style="width:100%" id="BAN">
+<caption>Doctors in BANGLORE</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+
+<table style="width:100%" id="NOD">
+<caption>Doctors in NOIDA</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+
+<table style="width:100%" id="CHEN">
+<caption>Doctors in CHENNAI</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+
+<table style="width:100%" id="LUCK">
+<caption>Doctors in LUCKNOW</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+<table style="width:100%" id="RAN">
+<caption>Doctors in RANCHI</caption>
+<th style="HEIGHT:70px">S.No.</th>
+<th>Doctor's Name</th>
+<th></th>
+<tr style="HEIGHT:70px">
+<td>1</td>
+<td>Ajay Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>2</td>
+<td>Sumit Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>3</td>
+<td>Rahul Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>4</td>
+<td>Ashish Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>5</td>
+<td>Ayush Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+<tr style="HEIGHT:70px">
+<td>6</td>
+<td>Avinash Kumar</td>
+<td><a href="" onClick="return bookApp()">Book appointment</a></td>
+</tr>
+</table><br><br><br><br>
+</div>
+</body>
+</html>
